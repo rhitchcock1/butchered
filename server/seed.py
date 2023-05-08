@@ -7,7 +7,13 @@ with app.app_context():
   # u2=User(username= "ted", _password_hash = "1234", email = "ted@example.com" )
   # u3=User(username= "sue", _password_hash = "1234", email = "sue@example.com" )
   u1 = User(username= "beth", _password_hash = "1234", email = "beth@example.com", admin = "true" )
-  
+  User.query.delete()
+        # Review.query.delete()
+  print("Starting seed...")
+        # db.session.add_all(salons)
+  db.session.add(u1)
+        # db.session.add_all(reviews)
+  db.session.commit()
 
  
  
@@ -49,14 +55,14 @@ with app.app_context():
 #   reviews = [r1, r2, r3]
 
 
-if __name__ == '__main__':
+# # if __name__ == '__main__':
    
-    with app.app_context():
-        # Salon.query.delete()
-        User.query.delete()
-        # Review.query.delete()
-        print("Starting seed...")
-        # db.session.add_all(salons)
-        db.session.add(u1)
-        # db.session.add_all(reviews)
-        db.session.commit()
+#     # with app.app_context():
+#         # Salon.query.delete()
+#         User.query.delete()
+#         # Review.query.delete()
+#         print("Starting seed...")
+#         # db.session.add_all(salons)
+#         db.session.add(u1)
+#         # db.session.add_all(reviews)
+#         db.session.commit()
