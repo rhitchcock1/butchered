@@ -1,5 +1,5 @@
 # Remote library imports
-from flask import request, make_response, session
+from flask import request, make_response, session, render_template
 from flask_restful import Resource
 from flask import Flask
 
@@ -9,10 +9,14 @@ from config import app, db, api
 from models import User,Salon, Review
 from dotenv import load_dotenv
 load_dotenv()
-   
+
 @app.route('/')
-def index():
-    return {}, 200
+@app.route('/<int:id>')
+def index(id=0):
+    return render_template("index.html")   
+# @app.route('/')
+# def index():
+#     return {}, 200
 class Users(Resource):
     def get(self):
         user_list = [u.to_dict() for u in User.query.all()]
