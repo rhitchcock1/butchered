@@ -152,6 +152,7 @@ class ClearSession(Resource):
         session['user_id'] = None
 
         return {}, 204
+api.add_resource(ClearSession, '/clear', endpoint='clear')
 
 class Signup(Resource):
 
@@ -174,6 +175,7 @@ class Signup(Resource):
             return new_user.to_dict(), 201
 
         return {'error': '422 Unprocessable Entity'}, 422
+api.add_resource(Signup, '/signup', endpoint='signup')
 
 class CheckSession(Resource):
 
@@ -182,7 +184,7 @@ class CheckSession(Resource):
             user= User.query.filter(User.id == session['user_id']).first()
             return make_response(  user.to_dict(), 200 )
         return {}, 204
-    
+api.add_resource(CheckSession, '/check_session', endpoint='check_session')   
 
 
 class Login(Resource):
@@ -202,6 +204,7 @@ class Login(Resource):
             return user.to_dict(), 200
 
         return {'error': '401 Unauthorized'}, 401
+api.add_resource(Login, '/login', endpoint='login')
 
 class Logout(Resource):
 
@@ -210,12 +213,12 @@ class Logout(Resource):
         session['user_id'] = None
 
         return {}, 204
-
-api.add_resource(ClearSession, '/clear', endpoint='clear')
-api.add_resource(Signup, '/signup', endpoint='signup')
-api.add_resource(CheckSession, '/check_session', endpoint='check_session')
-api.add_resource(Login, '/login', endpoint='login')
 api.add_resource(Logout, '/logout', endpoint='logout')
+# api.add_resource(ClearSession, '/clear', endpoint='clear')
+# api.add_resource(Signup, '/signup', endpoint='signup')
+# api.add_resource(CheckSession, '/check_session', endpoint='check_session')
+# api.add_resource(Login, '/login', endpoint='login')
+# api.add_resource(Logout, '/logout', endpoint='logout')
 
 # if __name__ == '__main__':
 #     ( debug=True)
