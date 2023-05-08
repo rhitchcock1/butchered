@@ -7,7 +7,8 @@ from flask import Flask
 # Local imports
 from config import app, db, api
 from models import User,Salon, Review
-
+from dotenv import load_dotenv
+load_dotenv()
    
 @app.route('/')
 def index():
