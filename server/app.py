@@ -6,24 +6,17 @@ from flask import Flask
 # from index.html import client/public/index.html
 
 # Local imports
-from config import db, api
+from config import app, db, api
 from models import User,Salon, Review
 from dotenv import load_dotenv
 load_dotenv()
-
-app = Flask(
-    __name__,
-    static_url_path='',
-    static_folder='../client/build',
-    template_folder='../client/build',
-)
 
 
 
 @app.route('/')
 @app.route('/<int:id>')
 def index(id=0):
-    return render_template( 'index.html')   
+    return app.send_static_file('index.html')
 # @app.route('/')
 # def index():
 #     return {}, 200
