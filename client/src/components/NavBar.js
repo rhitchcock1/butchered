@@ -28,7 +28,7 @@ function NavBar() {
     fetch("https://butchered.onrender.com/api/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
-        navigate("/home")
+        navigate("/")
       }
     });
   }
@@ -131,7 +131,7 @@ function NavBar() {
               <ul className = " p-4 uppercase">
                 <li className ="p-4 border-b border-gray-600">
            <NavLink
-            to="/home"
+            to="/"
        
         // style={linkStyles}
          >
@@ -170,7 +170,7 @@ function NavBar() {
           <ul className = " p-4 uppercase">
             <li className ="p-4 border-b border-gray-600">
         <NavLink
-        to="/home"
+        to="/"
        
         // style={linkStyles}
       >
