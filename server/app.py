@@ -14,7 +14,7 @@ load_dotenv()
 @app.route('/')
 @app.route('/<int:id>')
 def index(id=0):
-    return render_template("index.html")   
+    return app.template_folder("index.html")   
 # @app.route('/')
 # def index():
 #     return {}, 200
