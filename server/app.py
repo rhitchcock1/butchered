@@ -6,10 +6,19 @@ from flask import Flask
 # from index.html import client/public/index.html
 
 # Local imports
-from config import app, db, api
+from config import db, api
 from models import User,Salon, Review
 from dotenv import load_dotenv
 load_dotenv()
+
+app = Flask(
+    __name__,
+    static_url_path='',
+    static_folder='../client/build',
+    template_folder='../client/build',
+)
+
+
 
 @app.route('/')
 @app.route('/<int:id>')
