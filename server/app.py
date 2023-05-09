@@ -2,7 +2,8 @@
 from flask import request, make_response, session, render_template
 from flask_restful import Resource
 from flask import Flask
-
+# from client/public/index.html import index.html
+# from index.html import client/public/index.html
 
 # Local imports
 from config import app, db, api
