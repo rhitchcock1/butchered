@@ -10,7 +10,7 @@ export default function ReviewCards({review, onUpdateReview}){
           helpful: help + 1,
         };
     
-        fetch(`https://butchered.onrender.com/reviews/${review.id}`, {
+        fetch(`https://butchered.onrender.com/api/reviews/${review.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function ReviewCards({review, onUpdateReview}){
               funny: funny + 1,
             };
         
-            fetch(`https://butchered.onrender.com/reviews/${review.id}`, {
+            fetch(`https://butchered.onrender.com/api/reviews/${review.id}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",

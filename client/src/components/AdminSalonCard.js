@@ -4,7 +4,7 @@ export default function SalonCard({salon, onDeleteSalon}){
    
 
     function handleDelete() {
-        fetch(`https://butchered.onrender.com/salons/${salon.id}`, {
+        fetch(`https://butchered.onrender.com/api/salons/${salon.id}`, {
           method: "DELETE",
         });
         onDeleteSalon(salon);

@@ -25,10 +25,10 @@ function NavBar() {
   }
   
   function handleLogoutClick() {
-    fetch("https://butchered.onrender.com/logout", { method: "DELETE" }).then((r) => {
+    fetch("https://butchered.onrender.com/api/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
-        navigate("/")
+        navigate("/home")
       }
     });
   }
@@ -48,7 +48,7 @@ function NavBar() {
           <ul className="hidden md:flex">
             <li className ="p-4">
            <NavLink
-            to="/"
+            to="/home"
        
         // style={linkStyles}
          >
@@ -85,7 +85,7 @@ function NavBar() {
           <ul className = "hidden md:flex">
             <li className ="p-4 uppercase">
         <NavLink
-        to="/"
+        to="/home"
        
         // style={linkStyles}
       >
@@ -131,7 +131,7 @@ function NavBar() {
               <ul className = " p-4 uppercase">
                 <li className ="p-4 border-b border-gray-600">
            <NavLink
-            to="/"
+            to="/home"
        
         // style={linkStyles}
          >
@@ -170,7 +170,7 @@ function NavBar() {
           <ul className = " p-4 uppercase">
             <li className ="p-4 border-b border-gray-600">
         <NavLink
-        to="/"
+        to="/home"
        
         // style={linkStyles}
       >

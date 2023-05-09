@@ -23,7 +23,7 @@ export default function Reviews(){
 
 
     useEffect(() => {
-      fetch("https://butchered.onrender.com/reviews")
+      fetch("https://butchered.onrender.com/api/reviews")
       .then ((r) => r.json())
       .then(setReviewArray)
     }, [])
@@ -33,7 +33,7 @@ export default function Reviews(){
     }
   
     useEffect(() => {
-      fetch("https://butchered.onrender.com/reviews")
+      fetch("https://butchered.onrender.com/api/reviews")
       .then(respose => respose.json())
       .then(setReviews)
   
@@ -67,7 +67,7 @@ export default function Reviews(){
           salon_id: formData.salon_id,
          
         }
-        fetch('https://butchered.onrender.com/reviews', { // our specific link needs to be added
+        fetch('https://butchered.onrender.com/api/reviews', { // our specific link needs to be added
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify(newReview)

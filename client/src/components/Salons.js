@@ -15,7 +15,7 @@ function Salons(){
   }
 
   useEffect(() => {
-    fetch("https://butchered.onrender.com/salons")
+    fetch("https://butchered.onrender.com/api/salons")
     .then(respose => respose.json())
     .then(setSalons)
     
@@ -44,7 +44,7 @@ function Salons(){
           image: formData.image,
          
         }
-        fetch('https://butchered.onrender.com/salons', { 
+        fetch('https://butchered.onrender.com/api/salons', { 
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify(newSalon)
@@ -59,7 +59,7 @@ function Salons(){
   const [salonArray, setSalonArray] = useState([])
   
     useEffect(() => {
-      fetch("https://butchered.onrender.com/salons")
+      fetch("https://butchered.onrender.com/api/salons")
       .then ((r) => r.json())
       .then(setSalonArray)
     }, [])

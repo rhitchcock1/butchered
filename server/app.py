@@ -73,7 +73,7 @@ class Salons (Resource):
         db.session.commit()
         return make_response(new_salon.to_dict(), 201)
 
-api.add_resource(Salons, "/salons", endpoint = "salon_list")
+api.add_resource(Salons, "/api/salons", endpoint = "salon_list")
 
 class SalonById(Resource):
     def get (self, id):
@@ -90,7 +90,7 @@ class SalonById(Resource):
         db.session.commit()
         return make_response({"deleted": "she gone"}, 204)
     
-api.add_resource(SalonById, "/salons/<int:id>", endpoint="ind_salon")
+api.add_resource(SalonById, "/api//salons/<int:id>", endpoint="ind_salon")
 
 class Reviews(Resource):
     def get(self):
@@ -116,7 +116,7 @@ class Reviews(Resource):
         db.session.commit()
         return make_response(new_review.to_dict(), 201)
     
-api.add_resource(Reviews, "/reviews", endpoint = "review_list")
+api.add_resource(Reviews, "/api/reviews", endpoint = "review_list")
 
 class ReviewById(Resource):
     def get(self, id):
@@ -142,7 +142,7 @@ class ReviewById(Resource):
         db.session.commit()
         return make_response(review.to_dict(), 201)
     
-api.add_resource(ReviewById, "/reviews/<int:id>", endpoint="ind_review")
+api.add_resource(ReviewById, "/api/reviews/<int:id>", endpoint="ind_review")
 
 class ClearSession(Resource):
 
@@ -175,7 +175,7 @@ class Signup(Resource):
             return new_user.to_dict(), 201
 
         return {'error': '422 Unprocessable Entity'}, 422
-api.add_resource(Signup, '/signup', endpoint='signup')
+api.add_resource(Signup, '/api/signup', endpoint='signup')
 
 class CheckSession(Resource):
 
@@ -204,7 +204,7 @@ class Login(Resource):
             return user.to_dict(), 200
 
         return {'error': '401 Unauthorized'}, 401
-api.add_resource(Login, '/login', endpoint='login')
+api.add_resource(Login, '/api/login', endpoint='login')
 
 class Logout(Resource):
 
@@ -213,7 +213,7 @@ class Logout(Resource):
         session['user_id'] = None
 
         return {}, 204
-api.add_resource(Logout, '/logout', endpoint='logout')
+api.add_resource(Logout, '/api/logout', endpoint='logout')
 # api.add_resource(ClearSession, '/clear', endpoint='clear')
 # api.add_resource(Signup, '/signup', endpoint='signup')
 # api.add_resource(CheckSession, '/check_session', endpoint='check_session')

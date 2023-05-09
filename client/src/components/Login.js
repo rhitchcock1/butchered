@@ -11,7 +11,7 @@ function Login() {
     function handleSubmit(e) {
       
       e.preventDefault();
-      fetch("https://butchered.onrender.com/login", {
+      fetch("https://butchered.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -21,7 +21,7 @@ function Login() {
         if (r.ok) {
           r.json().then((user) => setUser(user));
          
-         navigate("/")
+         navigate("/home")
         }else{
           alert("Incorrect Username or Password")
         }

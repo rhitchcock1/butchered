@@ -5,7 +5,7 @@ export default function AdminReviewCard({review, onUpdateReview, onDeleteReview 
   const [afunny, setAFunny] = useState(review.funny)
 
     function handleDelete() {
-      fetch(`https://butchered.onrender.com/reviews/${review.id}`, {
+      fetch(`https://butchered.onrender.com/api/reviews/${review.id}`, {
         method: "DELETE",
       });
       onDeleteReview(review);
@@ -17,7 +17,7 @@ export default function AdminReviewCard({review, onUpdateReview, onDeleteReview 
         helpful: ahelp + 1,
       };
   
-      fetch(`https://butchered.onrender.com/reviews/${review.id}`, {
+      fetch(`https://butchered.onrender.com/api/reviews/${review.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function AdminReviewCard({review, onUpdateReview, onDeleteReview 
             funny: afunny + 1,
           };
       
-          fetch(`https://butchered.onrender.com/reviews/${review.id}`, {
+          fetch(`https://butchered.onrender.com/api/reviews/${review.id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",

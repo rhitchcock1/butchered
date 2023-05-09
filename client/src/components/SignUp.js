@@ -16,7 +16,7 @@ function SignUp() {
 
     
     e.preventDefault();
-    fetch("https://butchered.onrender.com/signup", {
+    fetch("https://butchered.onrender.com/api/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ function SignUp() {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
-        navigate("/")
+        navigate("/home")
        }else{
         alert("Username alsready taken")
       }

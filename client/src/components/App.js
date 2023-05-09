@@ -61,7 +61,7 @@ function App() {
        
       <Routes>
 
-        <Route path="/" >
+        <Route path="/home" >
         <Route index element={<Home />}/>
         </Route>
        
@@ -88,7 +88,7 @@ function App() {
          <Route index element={<Login />}/>
         </Route>
       
-        <Route path="/" >
+        <Route path="/home" >
         <Route index element={<Home />}/>
         </Route>
         
