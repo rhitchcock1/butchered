@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import {AiOutlineLike, AiOutlineDelete} from 'react-icons/ai'
+import {FaRegLaughSquint} from 'react-icons/fa'
 
 export default function AdminReviewCard({review, onUpdateReview, onDeleteReview }){
   const [ahelp, setAHelp] = useState(review.helpful)
@@ -63,9 +65,9 @@ export default function AdminReviewCard({review, onUpdateReview, onDeleteReview 
         <img id="rImg" className=" mx-auto "  src = {review.image} alt = {review.review}/>
         
         <h4 className="text-xl font-bold px-1 pt-1">Review Date/Time: {review.created_at}</h4>
-        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleHLikeClick}> Helpful: {ahelp} </button>
-        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleFLikeClick}> Funny: {afunny} </button>
-        <button className=" bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-5 py-2 " onClick={handleDelete}>Delete Rrview</button>
+        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleHLikeClick}> <AiOutlineLike/> Helpful: {ahelp} </button>
+        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleFLikeClick}> < FaRegLaughSquint/> Funny: {afunny} </button>
+        <button className=" bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-5 py-2 " onClick={handleDelete}> <AiOutlineDelete/> Delete Review</button>
         </div>
         </div>
       

@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import {AiOutlineLike} from 'react-icons/ai'
+import {FaRegLaughSquint} from 'react-icons/fa'
 
 
 export default function ReviewCards({review, onUpdateReview}){
@@ -49,10 +51,11 @@ export default function ReviewCards({review, onUpdateReview}){
         <h1 className="text-2xl font-bold text-center py-2">Salon:{review.salon.name}</h1>
         {/* <h1 className="text-xl font-bold px-1">Rating: {review.rating}</h1> */}
         <p className=" text-[#8A1108] font-bold text-xl px-1 pb-2">Review: {review.content}</p>
+        <p className=" text-[#8A1108] font-bold text-xl px-1 pb-2"> {review.content}</p>
         <img id="rImg" className=" mx-auto " src = {review.image} alt = {review.review}/>
         <h4 className="text-xl font-bold px-1 pt-1">Review Date/Time: {review.created_at}</h4>
-        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleHLikeClick}> Helpful: {help} </button>
-        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleFLikeClick}> Funny: {funny} </button>
+        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleHLikeClick}> <AiOutlineLike/> Helpful: {help} </button>
+        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleFLikeClick}> < FaRegLaughSquint/> Funny: {funny} </button>
        
         </div>
         </div>

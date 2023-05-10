@@ -1,4 +1,5 @@
 import React from "react"
+import { AiOutlineDelete} from 'react-icons/ai'
 
 export default function SalonCard({salon, onDeleteSalon}){
    
@@ -20,7 +21,7 @@ export default function SalonCard({salon, onDeleteSalon}){
      
      <h2 className="text-center font-bold text-xl">{salon.location}</h2>
      <h4 className="text-center text-xl pb-2">{salon.contact}</h4>
-        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick = {handleDelete}>Delete Salon</button>
+        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick = {handleDelete}><AiOutlineDelete/>Delete Salon</button>
       </div>
     
       </div>
