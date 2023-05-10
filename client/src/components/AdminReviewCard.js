@@ -58,7 +58,8 @@ export default function AdminReviewCard({review, onUpdateReview, onDeleteReview 
        
         <h1 className="text-2xl font-bold text-center py-2">Salon: {review.salon.name}</h1>
      
-        <p className=" text-[#8A1108] font-bold text-xl px-1 pb-2">Review: {review.content}</p>
+        <p className=" text-[#8A1108] font-bold text-xl px-1 pb-2">Review:</p>
+        <p className=" text-[#8A1108] font-bold text-xl px-1 pb-2">{review.content}</p>
         <img id="rImg" className=" mx-auto "  src = {review.image} alt = {review.review}/>
         
         <h4 className="text-xl font-bold px-1 pt-1">Review Date/Time: {review.created_at}</h4>

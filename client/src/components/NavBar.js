@@ -6,16 +6,6 @@ import { UserContext } from "../context/user";
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 
 
-// const linkStyles = {
-//   display: "inline-block",
-//   width: "100px",
-//   padding: "12px",
-//   margin: "0 6px 6px",
-//   background: "black",
-//   textDecoration: "none",
-//   color: "white",
-// };
-
 function NavBar() {
   const { user, setUser} = useContext(UserContext);
   const navigate = useNavigate()
@@ -48,9 +38,7 @@ function NavBar() {
           <ul className="hidden md:flex">
             <li className ="p-4">
            <NavLink
-            to="/home"
-       
-        // style={linkStyles}
+            to="/"
          >
         Home
         </NavLink>
@@ -58,9 +46,6 @@ function NavBar() {
          <li className ="p-4">
           <NavLink
           to="/reviews"
-          
-          // style={linkStyles}
-        
         >
           Reviews
         </NavLink>
@@ -68,9 +53,7 @@ function NavBar() {
         <li className ="p-4">
         <NavLink
           to="/salons"
-          
-          // style={linkStyles}
-         
+
         >
           Salons
         </NavLink>
@@ -86,8 +69,6 @@ function NavBar() {
             <li className ="p-4 uppercase">
         <NavLink
         to="/"
-       
-        // style={linkStyles}
       >
         Home
       </NavLink>
@@ -95,9 +76,7 @@ function NavBar() {
       <li className ="p-4 uppercase">
       <NavLink
         to="/login"
-       
-        // style={linkStyles}
-     
+
       >
         Login
       </NavLink>
@@ -105,15 +84,12 @@ function NavBar() {
       <li className ="p-4 uppercase">
           <NavLink
         to="/signup"
-        
-        // style={linkStyles}
-     
+
       >
         SignUp
       </NavLink>
       </li>
-     
-  
+
           </ul>
           
          </div>
@@ -132,8 +108,6 @@ function NavBar() {
                 <li className ="p-4 border-b border-gray-600">
            <NavLink
             to="/"
-       
-        // style={linkStyles}
          >
         Home
         </NavLink>
@@ -141,9 +115,7 @@ function NavBar() {
          <li className ="p-4">
           <NavLink
           to="/reviews"
-          
-          // style={linkStyles}
-        
+
         >
           Reviews
         </NavLink>
@@ -151,9 +123,7 @@ function NavBar() {
         <li className ="p-4">
         <NavLink
           to="/salons"
-          
-          // style={linkStyles}
-         
+
         >
           Salons
         </NavLink>
@@ -171,8 +141,7 @@ function NavBar() {
             <li className ="p-4 border-b border-gray-600">
         <NavLink
         to="/"
-       
-        // style={linkStyles}
+
       >
         Home
       </NavLink>
@@ -180,9 +149,7 @@ function NavBar() {
       <li className ="p-4 border-b border-gray-600">
       <NavLink
         to="/login"
-       
-        // style={linkStyles}
-     
+
       >
         Login
       </NavLink>
@@ -190,31 +157,19 @@ function NavBar() {
       <li className ="p-4">
           <NavLink
         to="/signup"
-        
-        // style={linkStyles}
-     
+
       >
         SignUp
       </NavLink>
       </li>
      
-  
           </ul>
           
          </div>
         )}
         </div>
-    
-
-
-
-
 
          </div>
-
-   
-       
-   
  
   );
 }
