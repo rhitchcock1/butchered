@@ -22,7 +22,7 @@ export default function Home() {
               <div key={review.id} >
                  <h2 className="text-2xl font-bold text-center py-2">Salon:{review.salon.name}</h2>
               <h2 className=" text-[#8A1108] font-bold text-xl px-1 pb-2">Review:{review.content}</h2>
-              <h2 className="text-xl font-bold px-1">Rating:{review.rating}</h2>
+              {/* <h2 className="text-xl font-bold px-1">Rating:{review.rating}</h2> */}
             
              <img id="rImg" className=" mx-auto "  src ={review.image} alt = {review.content} />
               <h3 className="text-xl font-bold px-1 pt-1 border-b-2 border-black">{review.created_at}</h3>

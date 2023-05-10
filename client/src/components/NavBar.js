@@ -85,7 +85,7 @@ function NavBar() {
           <ul className = "hidden md:flex">
             <li className ="p-4 uppercase">
         <NavLink
-        to="/home"
+        to="/"
        
         // style={linkStyles}
       >
