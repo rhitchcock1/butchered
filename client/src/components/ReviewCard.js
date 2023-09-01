@@ -54,8 +54,8 @@ export default function ReviewCards({review, onUpdateReview}){
         <p className=" text-[#8A1108] font-bold text-xl px-1 pb-2"> {review.content}</p>
         <img id="rImg" className=" mx-auto " src = {review.image} alt = {review.review}/>
         <h4 className="text-xl font-bold px-1 pt-1">Review Date/Time: {review.created_at}</h4>
-        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleHLikeClick}> <AiOutlineLike/> Helpful: {help} </button>
-        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleFLikeClick}> < FaRegLaughSquint/> Funny: {funny} </button>
+        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleHLikeClick}> <AiOutlineLike className="ml-3  " size={30}/> Helpful: {help} </button>
+        <button className="bg-[#8A1108] w-[200px] rounded-md font-medium my-2 mx-2 py-2 " onClick={handleFLikeClick}> < FaRegLaughSquint size={20}/> Funny: {funny} </button>
        
         </div>
         </div>
