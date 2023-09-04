@@ -25,7 +25,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
 
 # Define metadata, instantiate db
-# metadata = MetaData(naming_convention={bb
+# metadata = MetaData(naming_convention={
 #     "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
 # })
 db = SQLAlchemy()
